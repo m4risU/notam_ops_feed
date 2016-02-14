@@ -11,7 +11,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'simple_form'
 gem 'haml'
-
+gem 'bootstrap-sass'
 
 group :development, :test do
   gem 'byebug'
@@ -23,5 +23,6 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'guard-rspec', require: false
+  gem 'rails_layout'
 end
 
