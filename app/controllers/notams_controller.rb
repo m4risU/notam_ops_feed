@@ -8,8 +8,7 @@ class NotamsController < ApplicationController
 
   def create
     @notam_form = NotamForm.new(@filter)
-    if @notam_form.validate(data_received)
-      @notam_form.save
+    if @notam_form.validate(data_received) && @notam_form.save
       InterpreterService.process(@filter.filtered_data)
       redirect_to notams_path
     else
