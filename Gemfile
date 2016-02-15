@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'simple_form'
 gem 'haml'
 gem 'bootstrap-sass'
+gem 'reform' # form objects
 
 group :development, :test do
   gem 'byebug'

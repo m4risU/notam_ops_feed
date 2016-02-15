@@ -1,0 +1,7 @@
+.h1
+  Paste NOTAM data in here
+
+= simple_form_for @notam_form do |f|
+  = f.input :data, as: :text, input_html: { rows: 8 }, placeholder: 'paste here...'
+
+  = f.submit 'Add NOTAMs'
