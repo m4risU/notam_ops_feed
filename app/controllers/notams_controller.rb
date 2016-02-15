@@ -18,6 +18,7 @@ class NotamsController < ApplicationController
   end
 
   def index
+    @notams = Notam.page(params[:page]).per(20)
   end
 
   private

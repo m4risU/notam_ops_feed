@@ -13,6 +13,7 @@ gem 'simple_form'
 gem 'haml'
 gem 'bootstrap-sass'
 gem 'reform' # form objects
+gem 'kaminari'
 
 group :development, :test do
   gem 'byebug'

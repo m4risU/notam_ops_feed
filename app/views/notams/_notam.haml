@@ -1,0 +1,4 @@
+%tr
+  %td= notam.icao
+  - [:mon, :tue, :wed, :thu, :fri, :sat, :sun].each do |day|
+    %td= notam.public_send day

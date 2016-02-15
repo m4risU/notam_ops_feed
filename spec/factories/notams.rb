@@ -1,5 +1,12 @@
 FactoryGirl.define do
   factory :notam do
-    create "MyString"
+    icao "MyString"
+    mon "MyString"
+    tue "MyString"
+    wed "MyString"
+    thu "MyString"
+    fri "MyString"
+    sat "MyString"
+    sun "MyString"
   end
 end

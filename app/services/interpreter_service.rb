@@ -2,14 +2,15 @@ class InterpreterService
 
   class << self
     def process(data)
-      data.map do |icao, hours|
-        HoursInterpreter.new(hours).as_params.merge(icao: icao)
+      data.each do |icao, hours|
+        Notam.create! HoursInterpreter.new(hours).as_params.merge(icao: icao)
       end
     end
   end
 
   class HoursInterpreter
     DAYS = %w{MON TUE WED THU FRI SAT SUN}
+
     def initialize(hours)
       @data = hours.scan(/([a-z\-]+)\s?(\d[\d\,\s-]*\d|CLSD|CLOSED)/i).inject({}) do |acc, time_pair|
         days, time_marker = time_pair

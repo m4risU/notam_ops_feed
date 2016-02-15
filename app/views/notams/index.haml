@@ -1,0 +1,7 @@
+= paginate @notams
+
+%table
+  - @notams.each do |notam|
+    = render notam
+
+= paginate @notams
