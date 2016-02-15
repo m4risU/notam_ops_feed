@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe HoursInterpreter, type: :model do
+RSpec.describe HoursInterpreter do
 
   describe '#new/#initialize' do
     context 'example no. 1' do
